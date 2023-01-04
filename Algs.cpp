@@ -100,16 +100,15 @@ void Population::Iterate()
 	{
 		int pivot = rand() % INDS_AMOUNT;
 
-
 		parents[0] = std::max_element(individs + 0, individs + pivot, cmp);
 
 		parents[1] = std::max_element(individs + pivot, individs + INDS_AMOUNT, cmp);
 	}
 
 	{
-		int pivot1 = rand() % (GENS_AMOUNT - 3) + 1;
-		int pivot2 = rand() % (GENS_AMOUNT - pivot1 - 2) + pivot1 + 1;
-		int pivot3 = rand() % (GENS_AMOUNT - pivot2 - 1) + pivot2 + 1;
+		int pivot1 = OBJS_AMOUNT * OP_PERSENTAGE;
+		int pivot2 = OBJS_AMOUNT * 2 * OP_PERSENTAGE;
+		int pivot3 = OBJS_AMOUNT * 3 * OP_PERSENTAGE;
 	
 		memcpy(offspring.genome, parents[0]->genome, pivot1);
 		memcpy(offspring.genome + pivot1, parents[1]->genome + pivot1, pivot2 - pivot1);

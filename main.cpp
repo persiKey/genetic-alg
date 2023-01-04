@@ -9,15 +9,15 @@ using std::cout;
 
 int main()
 {
-	srand(time(NULL));
+	//srand(time(NULL));
 
 	Population p1;
 
-	for (size_t i = 0; i < 10000; i++)
+	for (size_t i = 0; i < 1000; i++)
 	{
-		p1.Iterate();
 		if (!(i % 20))
 			cout << p1.GetMaxWorth() << '\n';
+		p1.Iterate();
 	}
 	p1.PrintMax();
 	char key;

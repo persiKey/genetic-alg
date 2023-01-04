@@ -19,6 +19,7 @@ constexpr int LOW_WEIGHT_BOUND = 1;
 constexpr int UP_WEIGHT_BOUND = 25;
 
 constexpr int MUT_CHANCE = 5;
+constexpr float OP_PERSENTAGE = 0.25;
 
 
 
